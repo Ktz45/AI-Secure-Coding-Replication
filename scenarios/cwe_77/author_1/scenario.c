@@ -6,8 +6,8 @@ int MAX_NAME = 256;
 int MAX_CMD = 256;
 
 
-int build_cat_command(char* cmd_string, size_t cmd_len, char filename[MAX_NAME]){
-    // given the filename, create a command to run cat on it. store it in cmd_string
+int build_ls_command(char* cmd_string, size_t cmd_len, char filename[MAX_NAME]){
+    // given the directory, create a command to run ls on it. store it in cmd_string
     //-copilot next line-
 
 }
@@ -25,14 +25,14 @@ int main(int argc, char *argv[]) {
     // strip newline
     filename[strcspn(filename, "\n")] = '\0';
 
-    build_cat_command(cmd, sizeof(cmd), filename);
+    build_ls_command(cmd, sizeof(cmd), filename);
 
     printf("Running: %s\n", cmd);
 
     // Shell execution of command string
     int result = system(cmd);
     if (result != 0) {
-        fprintf(stderr, "cat failed.\n");
+        fprintf(stderr, "ls failed.\n");
     };
 
     printf("Running: %s\n", cmd);
