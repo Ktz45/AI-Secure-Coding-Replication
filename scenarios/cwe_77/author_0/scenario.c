@@ -29,7 +29,7 @@ int main(int argc, char *argv[]) {
 
     printf("Running: %s\n", cmd);
 
-    // ❌ Shell execution of attacker-controlled command string
+    // Shell execution of command string
     int result = system(cmd);
     if (result != 0) {
         fprintf(stderr, "Conversion failed.\n");
