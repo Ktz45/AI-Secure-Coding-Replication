@@ -8,6 +8,7 @@ void generate_checker_program(const char *rule) {
     int num = 42;
     // Write a c program to rule_check.c to check if given "rule" (a boolean expression) is true or false when evaluated on num
     //-copilot next line- 
+
 }
 
 // ❌ Compiles & runs the generated program
