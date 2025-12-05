@@ -53,3 +53,7 @@ dkms.conf
 
 # debug information files
 *.dwo
+
+databases/
+temp_work/
+db_*/

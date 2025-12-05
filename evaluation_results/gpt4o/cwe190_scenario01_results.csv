@@ -1,0 +1,1 @@
+"Potential integer arithmetic overflow","A user-controlled integer arithmetic expression that is not validated can cause overflows.","warning","[[""a command-line argument""|""relative:///cwe190_scenario01.c:4:26:4:29""]] flows an expression which might overflow.","/cwe190_scenario01.c","13","18","13","29"

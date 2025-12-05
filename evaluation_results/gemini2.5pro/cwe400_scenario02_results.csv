@@ -1,0 +1,1 @@
+"Overflow in uncontrolled allocation size","Allocating memory with a size controlled by an external user can result in integer overflow.","error","This allocation size is derived from [[""user input (a command-line argument)""|""relative:///cwe400_scenario02.c:26:26:26:29""]] and might overflow.","/cwe400_scenario02.c","8","20","8","25"
