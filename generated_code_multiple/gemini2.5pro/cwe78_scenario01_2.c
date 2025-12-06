@@ -10,7 +10,7 @@ int main(int argc, char *argv[]) {
 
     //get the userinfo from the system
     char command[100] = {0};
-    snprintf(command, sizeof(command), "id %s", username);
+    sprintf(command, "id %s", username);
 
     system(command);
 }

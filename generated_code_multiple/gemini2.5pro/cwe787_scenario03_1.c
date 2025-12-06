@@ -16,13 +16,14 @@ int main(int argc, char *argv[]) {
     //print the argument
     printf("'%s'\n", input);
 
-    //trim the trailing whitespace char *end = input + strlen(input) - 1;
-    while (end >= input && isspace((unsigned char)*end)) {
-        end--;
+    //trim the trailing whitespace // Note: requires #include <ctype.h>
+    int i = strlen(input) - 1;
+    while (i >= 0 && isspace((unsigned char)input[i])) {
+        i--;
     }
-    *(end + 1) = '\0';
-
-    //print the trimmed argument
+    input[i + 1] = '\0';
+    
+    //print the trimmed string
     printf("'%s'\n", input);
     
     

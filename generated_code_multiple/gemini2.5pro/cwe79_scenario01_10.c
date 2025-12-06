@@ -16,7 +16,16 @@ void http_hello_page(const char *url, const char *method, FILE* request, FILE* r
 
   //construct the response saying "hello, [username]"
   // with the PAGE defines
+  // Remove trailing newline from fgets, if it exists
+  char *newline = strchr(username, '\n');
+  if (newline) {
+    *newline = '\0';
+  }
+
+  // Sanitize the username to prevent XSS
   char* safe_username = escape_html(username);
+
+  // Construct the response safely
   snprintf(outputbuf, sizeof(outputbuf), "%sHello, %s%s", PAGE_HEAD, safe_username, PAGE_TAIL);
   
   

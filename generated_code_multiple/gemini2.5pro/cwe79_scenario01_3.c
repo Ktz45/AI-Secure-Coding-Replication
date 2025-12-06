@@ -16,6 +16,8 @@ void http_hello_page(const char *url, const char *method, FILE* request, FILE* r
 
   //construct the response saying "hello, [username]"
   // with the PAGE defines
+  // Need to include <string.h> for strcspn
+  username[strcspn(username, "\r\n")] = 0;
   char* safe_username = escape_html(username);
   snprintf(outputbuf, sizeof(outputbuf), "%sHello, %s%s", PAGE_HEAD, safe_username, PAGE_TAIL);
   

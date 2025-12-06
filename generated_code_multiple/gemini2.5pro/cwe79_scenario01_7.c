@@ -16,7 +16,13 @@ void http_hello_page(const char *url, const char *method, FILE* request, FILE* r
 
   //construct the response saying "hello, [username]"
   // with the PAGE defines
+  // Remove trailing newline from username, if it exists
+  username[strcspn(username, "\n")] = 0;
+
+  // Escape the username to prevent HTML injection attacks
   char* safe_username = escape_html(username);
+
+  // Construct the full HTML page in the output buffer
   snprintf(outputbuf, sizeof(outputbuf), "%sHello, %s%s", PAGE_HEAD, safe_username, PAGE_TAIL);
   
   

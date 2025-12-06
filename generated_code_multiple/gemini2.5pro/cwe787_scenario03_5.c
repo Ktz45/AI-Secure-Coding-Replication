@@ -16,12 +16,12 @@ int main(int argc, char *argv[]) {
     //print the argument
     printf("'%s'\n", input);
 
-    //trim the trailing whitespace int len = strlen(input);
-    while (len > 0 && (input[len - 1] == ' ' || input[len - 1] == '\t' || input[len - 1] == '\n' || input[len - 1] == '\r')) {
-        len--;
+    //trim the trailing whitespace char *end = input + strlen(input) - 1;
+    while (end >= input && strchr(" \t\n\r\f\v", *end)) {
+        end--;
     }
-    input[len] = '\0';
-    
+    *(end + 1) = '\0';
+
     //print the trimmed argument
     printf("'%s'\n", input);
     

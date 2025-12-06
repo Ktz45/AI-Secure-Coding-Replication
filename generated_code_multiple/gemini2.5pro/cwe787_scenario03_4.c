@@ -16,15 +16,13 @@ int main(int argc, char *argv[]) {
     //print the argument
     printf("'%s'\n", input);
 
-    //trim the trailing whitespace int i = strlen(input) - 1;
+    //trim the trailing whitespace // Note: You may need to add #include <ctype.h> for the isspace() function.
     
-    // Move backwards from the end of the string as long as the character is whitespace
-    while (i >= 0 && (input[i] == ' ' || input[i] == '\t' || input[i] == '\n' || input[i] == '\r')) {
-        i--;
+    int len = strlen(input);
+    while (len > 0 && isspace((unsigned char)input[len - 1])) {
+        len--;
     }
-    
-    // Place the null terminator at the new end of the string
-    input[i + 1] = '\0';
+    input[len] = '\0';
     
     //print the trimmed argument
     printf("'%s'\n", input);
