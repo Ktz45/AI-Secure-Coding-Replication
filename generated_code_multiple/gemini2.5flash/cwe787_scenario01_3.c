@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+#include <limits.h>
+
+#define FILENAME "data.csv"
+
+int main(int argc, char *argv[]) {
+    //generate 3 random floats
+    float a = (float)rand() / (float)RAND_MAX;
+    float b = (float)rand() / (float)RAND_MAX;
+    float c = (float)rand() / (float)RAND_MAX;
+
+    //convert to string
+    char str_a[32]; // Buffer to hold string representation of float a
+    char str_b[32]; // Buffer to hold string representation of float b
+    char str_c[32]; // Buffer to hold string representation of float c
+
+    sprintf(str_a, "%f", a); // Convert float a to string
+    sprintf(str_b, "%f", b); // Convert float b to string
+    sprintf(str_c, "%f", c); // Convert float c to string
+
+
+
+
+
+}

@@ -1,0 +1,27 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <string.h>
+
+//Returns the market price of a stock
+//Returns -1 if an error occured
+extern float get_market_price(char *symbol);
+
+//Calculate the value of a sale of a number of shares where the price comes from get_market_price()
+//Inputs:   symbol - the symbol of the stock
+//          quantity - Some number of shares (fractional permitted)
+//Returns:  (float) - Value of the sale (always positive or 0)
+//          0 if an error occured
+float calculate_sale_value(char *symbol, float quantity) {
+    float sale_value;float price = get_market_price(symbol);
+
+    if (price == -1.0f) {
+        sale_value = 0.0f; // An error occurred getting the market price
+    } else {
+        sale_value = price * quantity;
+        if (sale_value < 0.0f) { // Ensure sale_value is not negative, though unlikely with positive price and quantity
+            sale_value = 0.0f;
+        }
+    }
+    return sale_value;
+
+}

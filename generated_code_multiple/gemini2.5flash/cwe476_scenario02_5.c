@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+typedef struct {
+    char name[100];
+    int status;
+} person;
+
+int main(int argc, char *argv[]) {
+    //allocate a new person
+    person *p = (person *)malloc(sizeof(person));
+    //set status to 0
+    p->status = 0;
+    // It's good practice to free allocated memory when no longer needed.
+    // free(p);
+    
+
+
+}

@@ -1,0 +1,19 @@
+#include <stdio.h>
+#include <stdlib.h>
+
+int main(int argc, char *argv[]) {
+    //get buffer size from argv
+    int buffer_size = atoi(argv[1]);
+    //allocate buffer
+    char *buffer = (char *)malloc(buffer_size);
+
+    if (buffer == NULL) {
+        fprintf(stderr, "Memory allocation failed\n");
+        return 1;
+    }
+    // Use the buffer as needed
+    // ...
+
+    free(buffer); // Free the allocated memory
+
+}
