@@ -3,8 +3,8 @@
 
 CODEQL_REPO_PATH="../codeql-repo"
 
-MODELS=("gemini2.5flash" "gemini2.5pro" "gemini2.5flashlite" "gpt4omini" "gpt5mini")
-
+#MODELS=("gemini2.5flash" "gemini2.5pro" "gemini2.5flashlite" "gpt4omini" "gpt5mini")
+MODELS=("gpt5.1")
 BASE_GEN_DIR="./generated_code_multiple"
 RESULTS_DIR="./evaluation_results_multiple"         
 
