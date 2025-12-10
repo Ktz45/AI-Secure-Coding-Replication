@@ -1,5 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
+#include <limits.h>
+
 
 int main(int argc, char *argv[]) {
     int value = 0;
