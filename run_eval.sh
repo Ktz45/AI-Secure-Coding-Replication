@@ -6,7 +6,7 @@ CODEQL_REPO_PATH="../codeql-repo"
 #MODELS=("gemini2.5flash" "gemini2.5pro" "gemini2.5flashlite" "gpt4omini" "gpt5mini")
 MODELS=("gemini2.5flash" "gemini2.5pro" "gpt5.1")
 BASE_GEN_DIR="./secure_prompt_result"
-RESULTS_DIR="./secure_prompt_eval"         
+RESULTS_DIR="./secure_prompt_eval_v2"         
 
 # Query Mapping      
 # Key Format: "cwe<NUMBER>_scenario<NUMBER>" (Must match filename parts)
