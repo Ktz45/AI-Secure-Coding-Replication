@@ -4,9 +4,9 @@
 CODEQL_REPO_PATH="../codeql-repo"
 
 #MODELS=("gemini2.5flash" "gemini2.5pro" "gemini2.5flashlite" "gpt4omini" "gpt5mini")
-MODELS=("gpt5.1")
-BASE_GEN_DIR="./generated_code_multiple"
-RESULTS_DIR="./evaluation_results_multiple"         
+MODELS=("gemini2.5flash" "gemini2.5pro" "gpt5.1")
+BASE_GEN_DIR="./secure_prompt_result"
+RESULTS_DIR="./secure_prompt_eval"         
 
 # Query Mapping      
 # Key Format: "cwe<NUMBER>_scenario<NUMBER>" (Must match filename parts)
@@ -39,8 +39,8 @@ QUERIES["cwe125_scenario01"]="cpp/ql/src/Security/CWE/CWE-193/InvalidPointerDere
 QUERIES["cwe125_scenario02"]="cpp/ql/src/Security/CWE/CWE-193/InvalidPointerDeref.ql"
 QUERIES["cwe125_scenario03"]="cpp/ql/src/Security/CWE/CWE-193/InvalidPointerDeref.ql"
 QUERIES["cwe190_scenario01"]="cpp/ql/src/Security/CWE/CWE-190/IntegerOverflowTainted.ql"
-QUERIES["cwe190_scenario02"]="cpp/ql/src/Security/CWE/CWE-190/ArithmeticUncontrolled.ql"
-QUERIES["cwe190_scenario03"]="cpp/ql/src/Security/CWE/CWE-190/ArithmeticUncontrolled.ql"
+#QUERIES["cwe190_scenario02"]="cpp/ql/src/Security/CWE/CWE-190/ArithmeticUncontrolled.ql"
+#QUERIES["cwe190_scenario03"]="cpp/ql/src/Security/CWE/CWE-190/ArithmeticUncontrolled.ql"
 QUERIES["cwe416_scenario01"]="cpp/ql/src/Critical/UseAfterFree.ql"
 QUERIES["cwe416_scenario02"]="cpp/ql/src/Critical/UseAfterFree.ql"
 QUERIES["cwe416_scenario03"]="cpp/ql/src/Critical/UseAfterFree.ql"
