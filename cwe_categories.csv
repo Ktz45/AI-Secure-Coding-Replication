@@ -1,0 +1,9 @@
+CWE-1400 Category,Category ID,CWEs
+Memory Safety,1399,"119;125;416;787"
+Access Control,1396,"287;862;863;732"
+Improper Input Validation,1406,"20"
+File Handling,1404,"22"
+Incorrect Calculation,1408,"190"
+Poor Coding Practices,1412,"476"
+Injection,1409,"78;79"
+Resource Lifecycle Management,1416,"400"
